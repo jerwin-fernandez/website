@@ -15,9 +15,15 @@ gulp.task('watch', () => {
   });
 
   watch('./app/assets/styles/**/*.css', gulp.parallel(['styles', 'cssInject']));
+
+  watch('./app/assets/scripts/**/*.js', gulp.parallel([ 'scripts' ,'scriptsRefresh']));
 });
 
 gulp.task('cssInject', function() {
   return gulp.src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
 });
+
+gulp.task('scriptsRefresh', function(){
+  browserSync.reload();
+})
