@@ -1,7 +1,7 @@
 .site-header{
   padding: 10px 0;
   position: absolute;
-  z-index: 9999;
+  z-index: 1;
   width: 100%;
   transition: background-color .3s ease-out;
 
